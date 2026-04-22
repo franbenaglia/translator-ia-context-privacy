@@ -20,13 +20,29 @@
     ul { margin: 8px 0 12px 20px; }
     footer { border-top: 1px solid rgba(127,127,127,.25); padding: 18px 16px; }
     .langtag { font-size: 12px; padding: 3px 8px; border: 1px solid rgba(127,127,127,.35); border-radius: 999px; display: inline-block; margin-left: 8px; }
+    .ai-notice {
+      background: #fef9c3;
+      border: 1px solid #fde047;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #713f12;
+    }
+    .ai-notice strong { display: block; margin-bottom: 4px; }
+    @media (prefers-color-scheme: dark) {
+      .ai-notice { background: #292524; border-color: #78350f; color: #fde68a; }
+    }
+    .third-parties-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0; }
+    .third-parties-table th { text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(127,127,127,.3); }
+    .third-parties-table td { padding: 6px 8px; border-bottom: 1px solid rgba(127,127,127,.15); vertical-align: top; }
   </style>
 </head>
 
 <body>
 <header>
   <h1>Translator IA Context – Privacy Policy / Política de Privacidad</h1>
-  <div class="muted">Last updated / Última actualización: <strong>March 2026</strong></div>
+  <div class="muted">Last updated / Última actualización: <strong>April 2026</strong></div>
   <nav>
     <a class="button" href="#en">English</a>
     <a class="button" href="#es">Español</a>
@@ -35,7 +51,8 @@
 </header>
 
 <main>
-  <!-- ENGLISH -->
+
+  <!-- ========== ENGLISH ========== -->
   <section id="en" lang="en">
     <h2>Privacy Policy <span class="langtag">EN</span></h2>
 
@@ -44,75 +61,172 @@
       Privacy contact: <strong>francisco.arcebenaglia@gmail.com</strong>.
     </p>
 
+    <!-- AI DISCLAIMER -->
+    <div class="ai-notice">
+      <strong>⚠️ Artificial Intelligence Disclaimer</strong>
+      This app uses generative AI to produce translations and contextual responses. AI-generated content
+      may contain errors or inaccuracies. <strong>Do not rely solely on this app for medical, legal, or
+      safety-critical decisions.</strong> Allergy and dietary alerts are AI-generated and do not replace
+      advice from a qualified healthcare professional. Always verify critical information with a trusted source.
+    </div>
+
     <h3>1) What the app does</h3>
     <p>
-      Translator IA Context helps travelers translate text from photos (e.g., restaurant menus and street signs) and speech.
-      Translations may use AI and optional context such as device location and user preferences (e.g., dietary restrictions).
+      Translator IA Context helps travelers translate text from photos (e.g., restaurant menus and street signs)
+      and speech using artificial intelligence. The AI may also use optional context such as your device location
+      and personal preferences (e.g., dietary restrictions, allergies) to personalize responses.
     </p>
 
     <h3>2) Data we collect and process</h3>
     <ul>
-      <li><strong>Account data:</strong> email address and user identifiers for account access. If you sign in with Google, we may receive basic profile information as provided by Google OAuth2.</li>
-      <li><strong>User preferences:</strong> preferences you provide (e.g., vegetarian, allergies, restrictions). These are stored on our servers to personalize results across sessions/devices.</li>
-      <li><strong>Camera images (temporary):</strong> when you take a photo for translation, the image is used to extract/translate text. Photos are <strong>not saved</strong> on your device and <strong>not stored</strong> on our servers.</li>
-      <li><strong>Microphone audio (optional, temporary):</strong> if you use voice translation, microphone input is used to transcribe/translate speech. Audio is not stored by the app.</li>
-      <li><strong>Location (optional):</strong> if enabled by you, precise GPS location may be used as context to improve relevance. Location is not required to use the app and is not stored permanently as a location history.</li>
-      <li><strong>Text inputs:</strong> text you type or questions you ask for translation are processed to generate translations.</li>
+      <li>
+        <strong>Account data:</strong> email address and user identifiers for account access. If you sign in
+        with Google (via Google Sign-In), we receive basic profile information as provided by Google OAuth2.
+      </li>
+      <li>
+        <strong>Health and dietary information (sensitive):</strong> if you choose to provide them, we store
+        food allergies, dietary preferences (e.g., vegetarian, vegan) and medical conditions. This information
+        is stored on our servers to personalize AI responses and is never sold or shared with advertisers.
+        Providing this data is entirely optional.
+      </li>
+      <li>
+        <strong>Camera images (temporary):</strong> when you take a photo for translation, the image is
+        temporarily sent to our backend and to the AI provider for text extraction and translation.
+        <strong>Photos are not saved on your device and not stored on our servers or by our AI provider.</strong>
+      </li>
+      <li>
+        <strong>Microphone audio (optional, temporary):</strong> if you use voice translation, microphone
+        input is transcribed and used to generate a translation. Audio is not stored.
+      </li>
+      <li>
+        <strong>Location (optional):</strong> if you grant permission, precise GPS location is used as context
+        to improve translation relevance. Location is not required to use the app and is not stored as a
+        location history.
+      </li>
+      <li>
+        <strong>Conversation history:</strong> translation sessions (questions asked and responses received)
+        are saved on our servers linked to your account, so you can review past translations. You can delete
+        individual conversations or your full account at any time.
+      </li>
+      <li>
+        <strong>Purchase and transaction data:</strong> if you purchase credits, we store transaction
+        identifiers and credit balance history for billing purposes. Payment processing is handled by
+        Google Play Billing or Stripe (depending on your download channel); we do not store full payment
+        card details.
+      </li>
+      <li>
+        <strong>Text inputs:</strong> text you type or questions you ask are processed to generate translations.
+      </li>
     </ul>
 
-    <h3>3) AI and backend processing</h3>
+    <h3>3) Artificial Intelligence — how it works and its limitations</h3>
     <p>
-      To provide translations, the app sends the minimum necessary content (such as extracted text, text queries, selected languages,
-      and optional context like preferences and optional location when enabled) to our backend hosted on <strong>Amazon Web Services (AWS)</strong>
-      and/or to external AI/translation service providers strictly for app functionality.
+      To provide translations, the app sends the minimum necessary content (extracted text, text queries,
+      selected languages, and optional context such as preferences and GPS location when enabled) to our
+      backend hosted on <strong>Amazon Web Services (AWS)</strong> and to our AI provider,
+      <strong>OpenAI</strong>, which powers the translation and contextual responses.
     </p>
     <p>
-      <strong>We do not store original photos.</strong> Images are processed only to extract/translate text and then discarded.
+      <strong>Important limitations of AI-generated content:</strong>
+    </p>
+    <ul>
+      <li>Translations and responses are generated by AI and may contain errors, omissions, or cultural inaccuracies.</li>
+      <li>Allergy and dietary alerts are generated based on AI analysis of images and text — they are not infallible and should not replace consultation with a healthcare professional or the restaurant staff.</li>
+      <li>The app is intended as a travel aid, not as a substitute for professional translation, medical, or legal advice.</li>
+    </ul>
+    <p>
+      <strong>We do not store original photos.</strong> Images are processed only to extract and translate
+      text, then immediately discarded. OpenAI's data processing is governed by
+      <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI's Privacy Policy</a>.
     </p>
 
     <h3>4) How we use data</h3>
     <ul>
       <li>Account access and user authentication</li>
-      <li>Provide translations from images, text, and speech</li>
-      <li>Personalize translations using stored preferences</li>
-      <li>Optional context-based relevance (when location is enabled)</li>
+      <li>Generate AI translations from images, text, and speech</li>
+      <li>Personalize AI responses using stored preferences and health information</li>
+      <li>Improve translation relevance with optional GPS context</li>
+      <li>Store conversation history for user review</li>
+      <li>Process and record credit purchases</li>
       <li>Security, abuse prevention, and service operation</li>
     </ul>
 
-    <h3>5) Sharing</h3>
-    <p>
-      We do not sell personal data. Data may be shared only with service providers necessary to operate the app
-      (e.g., AWS hosting, Google OAuth2 authentication, and AI/translation providers) solely for providing the service.
-    </p>
+    <h3>5) Third-party service providers</h3>
+    <p>We do not sell personal data. We share data only with the following service providers, solely to operate the app:</p>
+    <table class="third-parties-table">
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Purpose</th>
+          <th>Data shared</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Amazon Web Services (AWS)</strong></td>
+          <td>Backend hosting and infrastructure</td>
+          <td>All data passing through the backend</td>
+        </tr>
+        <tr>
+          <td><strong>OpenAI</strong></td>
+          <td>AI translation and contextual responses</td>
+          <td>Text, image content (temporary), optional preferences and location context</td>
+        </tr>
+        <tr>
+          <td><strong>Google Sign-In (OAuth2)</strong></td>
+          <td>Optional account authentication</td>
+          <td>Basic profile if you choose Google login</td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Billing</strong></td>
+          <td>In-app purchase processing (Google Play version)</td>
+          <td>Purchase tokens and transaction identifiers</td>
+        </tr>
+        <tr>
+          <td><strong>RevenueCat</strong></td>
+          <td>Subscription and purchase management</td>
+          <td>Purchase records and subscription status</td>
+        </tr>
+        <tr>
+          <td><strong>Stripe</strong></td>
+          <td>Payment processing (direct APK channel only)</td>
+          <td>Payment session identifiers; card data handled directly by Stripe</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>6) Data retention</h3>
     <ul>
-      <li><strong>Preferences:</strong> retained while your account is active or until you request deletion.</li>
-      <li><strong>Account data:</strong> retained while your account is active or until deletion is requested.</li>
-      <li><strong>Photos & audio:</strong> not stored (processed temporarily and discarded).</li>
+      <li><strong>Account data and preferences (including health data):</strong> retained while your account is active or until you request deletion.</li>
+      <li><strong>Conversation history:</strong> retained while your account is active; you may delete individual conversations at any time from within the app.</li>
+      <li><strong>Purchase and transaction records:</strong> retained for billing and legal compliance purposes; transaction history may be anonymized upon account deletion.</li>
+      <li><strong>Photos and audio:</strong> not stored — processed temporarily and immediately discarded.</li>
       <li><strong>Location:</strong> used only when enabled; not stored as a location history.</li>
     </ul>
 
-    <h3>7) Your choices</h3>
+    <h3>7) Your rights and choices</h3>
     <ul>
-      <li>You can use the app without enabling location (GPS).</li>
+      <li>You can use the app without enabling GPS location.</li>
       <li>You can disable microphone access and use text/photo translation only.</li>
-      <li>You can request account deletion and removal of stored preferences (see Account Deletion page).</li>
+      <li>You can delete individual translation conversations from within the app.</li>
+      <li>You can request full account deletion and removal of all stored personal data — see our <a href="./account-deletion.html">Account Deletion page</a>.</li>
+      <li>You can contact us at <strong>francisco.arcebenaglia@gmail.com</strong> to access, correct, or delete your data.</li>
     </ul>
 
     <h3>8) Children</h3>
     <p>
-      The app is not specifically directed to children under 13. If a parent/guardian believes a child provided personal information without consent,
-      please contact us.
+      The app is not directed to children under 13. If a parent or guardian believes a child provided personal
+      information without consent, please contact us and we will promptly delete it.
     </p>
 
     <h3>9) Changes to this policy</h3>
     <p>
-      We may update this policy from time to time. Updates will be posted on this page with a revised “Last updated” date.
+      We may update this policy from time to time. Updates will be posted on this page with a revised
+      "Last updated" date. Continued use of the app after changes constitutes acceptance of the updated policy.
     </p>
   </section>
 
-  <!-- SPANISH -->
+  <!-- ========== ESPAÑOL ========== -->
   <section id="es" lang="es">
     <h2>Política de Privacidad <span class="langtag">ES</span></h2>
 
@@ -121,77 +235,175 @@
       Contacto de privacidad: <strong>francisco.arcebenaglia@gmail.com</strong>.
     </p>
 
+    <!-- AI DISCLAIMER ES -->
+    <div class="ai-notice">
+      <strong>⚠️ Aviso sobre Inteligencia Artificial</strong>
+      Esta aplicación utiliza inteligencia artificial generativa para producir traducciones y respuestas
+      contextuales. El contenido generado por IA puede contener errores o imprecisiones.
+      <strong>No utilice esta aplicación como única fuente para decisiones médicas, legales o de seguridad crítica.</strong>
+      Las alertas de alergia y dieta son generadas por IA y no reemplazan la consulta con un profesional
+      de la salud. Verifique siempre la información crítica con una fuente confiable.
+    </div>
+
     <h3>1) Qué hace la aplicación</h3>
     <p>
-      Translator IA Context ayuda a viajeros a traducir texto desde fotos (por ejemplo, menús y carteles) y desde voz.
-      Las traducciones pueden apoyarse en IA y en contexto opcional como ubicación y preferencias del usuario (por ejemplo, restricciones alimentarias).
+      Translator IA Context ayuda a viajeros a traducir texto desde fotos (por ejemplo, menús de restaurantes
+      y carteles) y desde voz, utilizando inteligencia artificial. La IA también puede usar contexto opcional
+      como la ubicación del dispositivo y preferencias personales (por ejemplo, restricciones alimentarias,
+      alergias) para personalizar las respuestas.
     </p>
 
     <h3>2) Datos que recopilamos y tratamos</h3>
     <ul>
-      <li><strong>Datos de cuenta:</strong> correo electrónico e identificadores de usuario para acceder a la cuenta. Si inicias sesión con Google, podemos recibir información básica de perfil provista por Google OAuth2.</li>
-      <li><strong>Preferencias del usuario:</strong> preferencias que brindes (p. ej. vegetariano, alergias, restricciones). Se almacenan en nuestros servidores para personalizar resultados entre sesiones/dispositivos.</li>
-      <li><strong>Imágenes de cámara (temporales):</strong> al tomar una foto para traducir, la imagen se usa para extraer/traducir texto. Las fotos <strong>no se guardan</strong> en el dispositivo ni <strong>se almacenan</strong> en nuestros servidores.</li>
-      <li><strong>Audio de micrófono (opcional, temporal):</strong> si usas traducción por voz, el micrófono se usa para transcribir/traducir. El audio no se almacena.</li>
-      <li><strong>Ubicación (opcional):</strong> si el usuario lo habilita, la ubicación precisa (GPS) puede usarse como contexto para mejorar relevancia. No es obligatoria y no se guarda como historial.</li>
-      <li><strong>Textos ingresados:</strong> texto que escribas o preguntas que hagas para traducir se procesan para generar la traducción.</li>
+      <li>
+        <strong>Datos de cuenta:</strong> correo electrónico e identificadores de usuario para acceder a la cuenta.
+        Si iniciás sesión con Google (via Google Sign-In), recibimos información básica de perfil provista por Google OAuth2.
+      </li>
+      <li>
+        <strong>Información de salud y alimentación (datos sensibles):</strong> si elegís proporcionarlos, almacenamos
+        alergias alimentarias, preferencias dietéticas (p. ej. vegetariano, vegano) y condiciones médicas relevantes.
+        Esta información se guarda en nuestros servidores para personalizar las respuestas de la IA y nunca se vende
+        ni comparte con anunciantes. Proporcionar estos datos es completamente opcional.
+      </li>
+      <li>
+        <strong>Imágenes de cámara (temporales):</strong> al tomar una foto para traducir, la imagen se envía
+        temporalmente a nuestro backend y al proveedor de IA para extraer y traducir el texto.
+        <strong>Las fotos no se guardan en el dispositivo ni se almacenan en nuestros servidores ni por el proveedor de IA.</strong>
+      </li>
+      <li>
+        <strong>Audio de micrófono (opcional, temporal):</strong> si usás traducción por voz, el micrófono se usa
+        para transcribir y traducir. El audio no se almacena.
+      </li>
+      <li>
+        <strong>Ubicación (opcional):</strong> si otorgás el permiso, la ubicación GPS precisa se usa como contexto
+        para mejorar la relevancia de las traducciones. No es obligatoria y no se guarda como historial de ubicación.
+      </li>
+      <li>
+        <strong>Historial de conversaciones:</strong> las sesiones de traducción (preguntas y respuestas) se guardan
+        en nuestros servidores vinculadas a tu cuenta, para que puedas revisar traducciones anteriores. Podés eliminar
+        conversaciones individuales o tu cuenta completa en cualquier momento.
+      </li>
+      <li>
+        <strong>Datos de compras y transacciones:</strong> si comprás créditos, guardamos identificadores de transacción
+        e historial de balance de créditos por razones de facturación. El procesamiento de pagos es gestionado por
+        Google Play Billing o Stripe según el canal de descarga; no almacenamos datos completos de tarjetas de pago.
+      </li>
+      <li>
+        <strong>Textos ingresados:</strong> texto que escribás o preguntas que hagas se procesan para generar la traducción.
+      </li>
     </ul>
 
-    <h3>3) Procesamiento con IA y backend</h3>
+    <h3>3) Inteligencia Artificial — cómo funciona y sus limitaciones</h3>
     <p>
-      Para brindar traducciones, la app envía el mínimo necesario (texto extraído, consultas, idiomas seleccionados,
-      y contexto opcional como preferencias y ubicación si está habilitada) a un backend alojado en <strong>Amazon Web Services (AWS)</strong>
-      y/o a proveedores externos de IA/traducción únicamente para funcionamiento de la app.
+      Para brindar traducciones, la app envía el mínimo necesario (texto extraído, consultas, idiomas seleccionados
+      y contexto opcional como preferencias y ubicación GPS si está habilitada) a nuestro backend alojado en
+      <strong>Amazon Web Services (AWS)</strong> y a nuestro proveedor de IA, <strong>OpenAI</strong>,
+      que alimenta las traducciones y respuestas contextuales.
     </p>
+    <p><strong>Limitaciones importantes del contenido generado por IA:</strong></p>
+    <ul>
+      <li>Las traducciones y respuestas son generadas por IA y pueden contener errores, omisiones o imprecisiones culturales.</li>
+      <li>Las alertas de alergias y dieta son generadas por análisis de IA sobre imágenes y texto — no son infalibles y no deben reemplazar la consulta con un profesional de la salud o con el personal del establecimiento.</li>
+      <li>La app está diseñada como asistente de viaje, no como sustituto de traducción profesional, asesoramiento médico o legal.</li>
+    </ul>
     <p>
-      <strong>No almacenamos fotos originales.</strong> Las imágenes se procesan solo para extraer/traducir texto y luego se descartan.
+      <strong>No almacenamos fotos originales.</strong> Las imágenes se procesan únicamente para extraer y traducir
+      el texto, y luego se descartan inmediatamente. El tratamiento de datos por parte de OpenAI está regido por la
+      <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Política de Privacidad de OpenAI</a>.
     </p>
 
     <h3>4) Para qué usamos los datos</h3>
     <ul>
       <li>Acceso y autenticación de cuenta</li>
-      <li>Traducciones desde imágenes, texto y voz</li>
-      <li>Personalización mediante preferencias almacenadas</li>
-      <li>Relevancia contextual (cuando se habilita ubicación)</li>
-      <li>Seguridad y operación del servicio</li>
+      <li>Generar traducciones con IA desde imágenes, texto y voz</li>
+      <li>Personalizar respuestas de IA usando preferencias e información de salud almacenada</li>
+      <li>Mejorar la relevancia con contexto GPS opcional</li>
+      <li>Guardar historial de conversaciones para revisión del usuario</li>
+      <li>Procesar y registrar compras de créditos</li>
+      <li>Seguridad, prevención de abuso y operación del servicio</li>
     </ul>
 
-    <h3>5) Compartición</h3>
-    <p>
-      No vendemos datos personales. Los datos pueden compartirse únicamente con proveedores necesarios para operar la app
-      (por ejemplo, hosting en AWS, autenticación Google OAuth2 y proveedores de IA/traducción) solo para brindar el servicio.
-    </p>
+    <h3>5) Proveedores de servicios externos</h3>
+    <p>No vendemos datos personales. Compartimos datos únicamente con los siguientes proveedores, solo para operar la app:</p>
+    <table class="third-parties-table">
+      <thead>
+        <tr>
+          <th>Proveedor</th>
+          <th>Propósito</th>
+          <th>Datos compartidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Amazon Web Services (AWS)</strong></td>
+          <td>Hosting e infraestructura del backend</td>
+          <td>Todos los datos que pasan por el backend</td>
+        </tr>
+        <tr>
+          <td><strong>OpenAI</strong></td>
+          <td>Traducciones y respuestas contextuales con IA</td>
+          <td>Texto, contenido de imagen (temporal), preferencias y contexto de ubicación opcionales</td>
+        </tr>
+        <tr>
+          <td><strong>Google Sign-In (OAuth2)</strong></td>
+          <td>Autenticación de cuenta opcional</td>
+          <td>Perfil básico si elegís login con Google</td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Billing</strong></td>
+          <td>Procesamiento de compras in-app (versión Google Play)</td>
+          <td>Tokens de compra e identificadores de transacción</td>
+        </tr>
+        <tr>
+          <td><strong>RevenueCat</strong></td>
+          <td>Gestión de suscripciones y compras</td>
+          <td>Registros de compra y estado de suscripción</td>
+        </tr>
+        <tr>
+          <td><strong>Stripe</strong></td>
+          <td>Procesamiento de pagos (canal APK directo solamente)</td>
+          <td>Identificadores de sesión de pago; datos de tarjeta gestionados directamente por Stripe</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>6) Conservación de datos</h3>
     <ul>
-      <li><strong>Preferencias:</strong> se conservan mientras la cuenta esté activa o hasta solicitar eliminación.</li>
-      <li><strong>Datos de cuenta:</strong> se conservan mientras la cuenta esté activa o hasta solicitar eliminación.</li>
-      <li><strong>Fotos y audio:</strong> no se almacenan (se procesan temporalmente y se descartan).</li>
-      <li><strong>Ubicación:</strong> se usa solo si está habilitada; no se guarda como historial.</li>
+      <li><strong>Datos de cuenta y preferencias (incluida información de salud):</strong> se conservan mientras la cuenta esté activa o hasta que solicites su eliminación.</li>
+      <li><strong>Historial de conversaciones:</strong> se conserva mientras la cuenta esté activa; podés eliminar conversaciones individuales desde la app en cualquier momento.</li>
+      <li><strong>Registros de compras y transacciones:</strong> se conservan por razones de facturación y cumplimiento legal; el historial de transacciones puede anonimizarse al eliminar la cuenta.</li>
+      <li><strong>Fotos y audio:</strong> no se almacenan — se procesan temporalmente y se descartan de inmediato.</li>
+      <li><strong>Ubicación:</strong> se usa solo si está habilitada; no se guarda como historial de ubicación.</li>
     </ul>
 
-    <h3>7) Opciones del usuario</h3>
+    <h3>7) Tus derechos y opciones</h3>
     <ul>
-      <li>Se puede usar la app sin habilitar ubicación (GPS).</li>
-      <li>Se puede deshabilitar micrófono y usar solo traducción por texto/foto.</li>
-      <li>Se puede solicitar eliminación de cuenta y preferencias (ver página de Eliminación de cuenta).</li>
+      <li>Podés usar la app sin habilitar la ubicación GPS.</li>
+      <li>Podés deshabilitar el micrófono y usar solo traducción por texto/foto.</li>
+      <li>Podés eliminar conversaciones de traducción individuales desde la app.</li>
+      <li>Podés solicitar la eliminación completa de tu cuenta y todos tus datos — consultá nuestra <a href="./account-deletion.html">página de Eliminación de cuenta</a>.</li>
+      <li>Podés contactarnos en <strong>francisco.arcebenaglia@gmail.com</strong> para acceder, corregir o eliminar tus datos.</li>
     </ul>
 
     <h3>8) Menores de edad</h3>
     <p>
-      La app no está dirigida específicamente a menores de 13 años. Si un padre/madre o tutor considera que un menor proporcionó información sin consentimiento,
-      puede contactarnos.
+      La app no está dirigida a menores de 13 años. Si un padre, madre o tutor considera que un menor proporcionó
+      información personal sin consentimiento, por favor contactanos y lo eliminaremos de inmediato.
     </p>
 
     <h3>9) Cambios en esta política</h3>
     <p>
-      Podemos actualizar esta política ocasionalmente. Los cambios se publicarán en esta página con una nueva “Última actualización”.
+      Podemos actualizar esta política ocasionalmente. Los cambios se publicarán en esta página con una nueva fecha
+      de "Última actualización". El uso continuado de la app tras los cambios implica aceptación de la política actualizada.
     </p>
   </section>
+
 </main>
 
 <footer class="muted">
-  <div>Translator IA Context – Privacy Policy / Política de Privacidad</div>
+  <div>Translator IA Context – Privacy Policy / Política de Privacidad &nbsp;·&nbsp;
+    <a href="mailto:francisco.arcebenaglia@gmail.com">francisco.arcebenaglia@gmail.com</a>
+  </div>
 </footer>
 </body>
 </html>
